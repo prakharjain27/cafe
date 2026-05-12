@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth scroll-pt-28" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sun N Moon Cafe | Udaipur's Finest Rooftop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#e5e2e1",
+                    "surface-container-highest": "#353534",
+                    "surface-container": "#201f1f",
+                    "outline": "#a48c7d",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary-container": "#5b403c",
+                    "on-tertiary": "#00344c",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary-fixed": "#001e2e",
+                    "secondary": "#e3beb8",
+                    "background": "#131313",
+                    "secondary-fixed-dim": "#e3beb8",
+                    "tertiary-container": "#00a3e4",
+                    "on-primary": "#4f2500",
+                    "primary-fixed": "#ffdcc5",
+                    "outline-variant": "#564337",
+                    "primary-fixed-dim": "#ffb783",
+                    "surface-variant": "#353534",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error": "#690005",
+                    "tertiary": "#86cfff",
+                    "surface": "#131313",
+                    "inverse-primary": "#944a00",
+                    "on-error-container": "#ffdad6",
+                    "on-background": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary-fixed-dim": "#86cfff",
+                    "on-primary-container": "#502600",
+                    "on-secondary-container": "#d1ada7",
+                    "on-secondary": "#422a26",
+                    "on-primary-fixed": "#301400",
+                    "on-secondary-fixed": "#2b1613",
+                    "on-tertiary-fixed-variant": "#004c6d",
+                    "primary-container": "#e67e22",
+                    "primary": "#ffb783",
+                    "surface-bright": "#393939",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-container": "#00354d",
+                    "on-primary-fixed-variant": "#713700",
+                    "on-secondary-fixed-variant": "#5b403c",
+                    "surface-tint": "#ffb783",
+                    "on-surface-variant": "#dcc1b1",
+                    "error": "#ffb4ab",
+                    "secondary-fixed": "#ffdad4",
+                    "tertiary-fixed": "#c7e7ff",
+                    "surface-dim": "#131313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "24px",
+                    "margin-desktop": "80px",
+                    "stack-lg": "64px",
+                    "container-max": "1440px",
+                    "gutter": "24px",
+                    "stack-sm": "16px",
+                    "stack-md": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; }
+        .glass-card {
+            background: rgba(32, 31, 31, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(164, 140, 125, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+        }
+        .text-glow:hover {
+            text-shadow: 0 0 8px rgba(255, 183, 131, 0.6);
+        }
+        .scrolling-image-container {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #564337; border-radius: 10px; }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-3xl border-b border-outline-variant/20">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6">
+<a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim" href="#">Sun N Moon Cafe</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out" href="#about">About</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out" href="#menu">Menu</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out" href="#experience">Experience</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out" href="#gallery">Gallery</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out" href="#contact">Contact</a>
+</div>
+<button onclick="window.location.href='tel:+918619515956'" class="hidden md:block bg-primary text-on-primary px-8 py-3 rounded-full font-label-sm uppercase tracking-wider hover:scale-105 transition-transform duration-300 active:scale-95 shadow-lg shadow-primary/10">
+                Book Now
+            </button>
+</div>
+</nav>
+<!-- Floating FAB -->
+<button onclick="window.location.href='tel:+918619515956'" class="fixed bottom-8 right-8 z-40 bg-primary-container text-on-primary-container p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group md:hidden">
+<span class="material-symbols-outlined text-3xl">call</span>
+</button>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0 scale-110">
+<img alt="Udaipur Skyline at Sunset" class="w-full h-full object-cover brightness-[0.4]" data-alt="A cinematic wide shot of Udaipur's skyline at sunset, featuring the City Palace and Lake Pichola reflecting vibrant hues of orange, purple, and gold. The atmosphere is romantic and serene, with soft golden hour lighting casting long shadows across the architectural heritage. The image captures a high-end luxury lifestyle feel with sharp details and deep contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU07noIm4oSkewfvCA4TWXF7neU9HSDO9t0AKP9z-JIblwQO5zwy0qPmS2UzQCN_frkuyN4joXxxXFqKKIJzmwyY1YsyWIaiRVOQ37L4D2aLuAqgVJ0_eq0kFbnyJipeWqhLza3zTUXMNIpOTWER6nxGJV6dHecbe_am1tWETxo6_7RnbfzHx71oi_3nObWnrSU4eAWLvUQLfGSCjAyZnlAbNoYSXJSwcp2ITVfsOX-afv05a__V25xeImsShn1nJJCDcWVKHtduAF"/>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-5xl md:text-display-lg text-on-background mb-6 leading-none">
+                    Redefine <br/>Your <span class="text-primary italic">Love</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                    Appetizing cuisines meeting everlasting views of Udaipur's golden horizon. Experience rooftop dining like never before.
+                </p>
+<div class="flex flex-wrap gap-6">
+<button onclick="window.location.href='tel:+918619515956'" class="bg-primary text-on-primary px-6 py-4 md:px-10 md:py-5 w-full md:w-auto rounded-full font-label-sm uppercase tracking-widest hover:bg-primary-fixed-dim transition-colors">Book Now</button>
+<button onclick="window.location.href='tel:+918619515956'" class="border border-outline px-6 py-4 md:px-10 md:py-5 w-full md:w-auto rounded-full font-label-sm uppercase tracking-widest hover:bg-surface-container transition-colors">View Menu</button>
+</div>
+</div>
+<!-- Floating Glass Booking Card -->
+<div class="hidden md:flex justify-end">
+<div class="glass-card p-10 rounded-[32px] w-[400px]">
+<h3 class="font-headline-md text-headline-md mb-6">Reserve Table</h3>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant/30 flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+<input type="date" id="res-date" style="color-scheme: dark;" class="bg-transparent border-none outline-none p-0 font-label-sm uppercase w-full text-on-surface focus:ring-0" required>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant/30 flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">group</span>
+<select id="res-guests" class="bg-transparent border-none outline-none p-0 font-label-sm uppercase w-full text-on-surface focus:ring-0" required>
+    <option value="1 Guest" class="bg-surface">1 Guest</option>
+    <option value="2 Guests" class="bg-surface" selected>2 Guests</option>
+    <option value="3 Guests" class="bg-surface">3 Guests</option>
+    <option value="4 Guests" class="bg-surface">4 Guests</option>
+    <option value="5+ Guests" class="bg-surface">5+ Guests</option>
+</select>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant/30 flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<input type="time" id="res-time" value="19:00" style="color-scheme: dark;" class="bg-transparent border-none outline-none p-0 font-label-sm uppercase w-full text-on-surface focus:ring-0" required>
+</div>
+<button onclick="bookTable()" class="w-full bg-primary-container text-on-primary-container py-5 rounded-xl font-label-sm uppercase tracking-widest mt-4 hover:opacity-90 transition-opacity">Find Table</button>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+<span class="font-label-sm uppercase tracking-widest text-outline">Scroll to explore</span>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-stack-lg bg-surface">
+<div class="px-margin-mobile md:px-margin-desktop">
+<div class="grid md:grid-cols-2 gap-stack-lg items-center mb-24">
+<div>
+<span class="text-primary font-label-sm uppercase tracking-[0.3em] mb-4 block">Since 2012</span>
+<h2 class="font-headline-lg text-4xl md:text-headline-lg mb-8">Luxury Above Gangaur Ghat</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Nestled in the heart of the Old City, Sun N Moon Cafe offers a sensory journey. Our rooftop sanctuary provides a panoramic perspective of Lake Pichola and the City Palace, paired with curated multi-cuisine delights and soul-stirring live music nights.
+                    </p>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">music_note</span>
+<div>
+<h4 class="font-label-sm uppercase font-bold mb-1">Live Music</h4>
+<p class="text-body-md text-on-surface-variant opacity-70">Acoustics under the stars</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">wine_bar</span>
+<div>
+<h4 class="font-label-sm uppercase font-bold mb-1">Cocktails</h4>
+<p class="text-body-md text-on-surface-variant opacity-70">Signature Udaipur blends</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="aspect-[4/5] rounded-[40px] overflow-hidden border border-outline-variant/30">
+<img alt="Rooftop Dining Ambience" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An elegant rooftop dining setting at night in Udaipur, with warm candlelight on marble tables and cozy seating. The background shows the city's twinkling lights and the silhouette of historic palaces. The lighting is low and intimate, emphasizing a romantic and sophisticated vibe with soft bokeh effects and a deep dark color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdsBMhl9iiAsL63xCSryBoVdWlWhYfYveSY3wNZpZURcUJ3KjajCWjLB5k4ijJkdak2WlXu9J__jB2-Ta_t4qCDc-NoovuhVbcDU-exvL5b6rZakHn-7eQjugXducxTdTYfdzXan8RfgwWfUo0S_Si6Whg10qHd72adXzFRQm5ErZe6uB9dZ_hMdsNZj-xCB5sCMhoKIWj_q3IVx5vcyXokBHviP4lS-vyat6z-3-8VK42COMmSdMQVcLWE5xzfd38rp3ub2R2N-rw"/>
+</div>
+<div class="absolute -bottom-10 -left-10 glass-card p-8 rounded-3xl hidden lg:block">
+<p class="font-headline-md text-primary">Udaipur's #1</p>
+<p class="font-label-sm uppercase tracking-widest">Sunset Destination</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Highlight Section -->
+<section id="menu" class="py-stack-lg bg-surface-container-lowest">
+<div class="px-margin-mobile md:px-margin-desktop">
+<div class="text-center max-w-2xl mx-auto mb-20">
+<h2 class="font-headline-lg text-4xl md:text-headline-lg mb-6">The Chef's Selection</h2>
+<div class="h-1 w-24 bg-primary mx-auto mb-6 rounded-full"></div>
+<p class="text-body-lg text-on-surface-variant italic">Crafted flavors that dance on your palate</p>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<!-- Menu Card 1 -->
+<div class="glass-card group p-8 rounded-[40px]">
+<div class="aspect-square rounded-3xl overflow-hidden mb-8">
+<img alt="Tandoori Platter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A gourmet presentation of Tandoori Veg Kebab Platter on a slate stone board. The kebabs are charred to perfection with vibrant green mint chutney and colorful pickled onions as garnish. The lighting is dramatic and focused, highlighting the textures and spices of the food, set against a dark, minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNN8Xlz929zEZWP98qNyl1JurCkUbCFZZR6jrkRwRQqQhXXBxl2To8X24rn6TcJb37BI_43I1ERK_lqhdJ618zX2DKxtXr0joZSLuSNp7hbGUp4Bn_EiMPbx6uemBHyBTjfOmYhgXheyPlGqBRJVXY4mXWlRDtqCxVXMvCQpVlTHI_I-P8ThsQPibBtITaN-rLmibaZXj7ijU1opk9jchWE27Z7Az8RRv-Tn__AYwpYDYin4eOeJUe79XqzDr6j_75lOuAQfmbeeQn"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md">Veg Kebab Platter</h3>
+<span class="text-primary font-headline-md">₹695</span>
+</div>
+<p class="text-on-surface-variant body-md mb-8">A symphony of smoky, spice-marinated vegetables slow-cooked in our traditional tandoor.</p>
+<button onclick="window.location.href='tel:+918619515956'" class="w-full border border-outline-variant py-3 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 font-label-sm uppercase tracking-widest">Order Now</button>
+</div>
+<!-- Menu Card 2 -->
+<div class="glass-card group p-8 rounded-[40px] md:mt-12">
+<div class="aspect-square rounded-3xl overflow-hidden mb-8">
+<img alt="Signature Burger" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A towering gourmet burger with a juicy patty, melting cheese, fresh lettuce, and ripe tomatoes, served in a brioche bun. The burger is presented with crispy golden fries on the side. The lighting is warm and inviting, emphasizing the freshness and luxury quality of the ingredients with a blurred restaurant background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwzASOVCG9-8R5uVmYyuWD_G2jSuIgDNo88nhoMkee17yLCfWry41X8DcxyNMS_8wdNqxUtQKAF3eUKnmtjpZ2y1B7yrSgC-ppPtSmwUSUCgwjEeWueprME76PMfxIsDU9qnHT1x60llVttHzNWLJFaXRTpIcaQ9Mi2GduJer2d4bGBhHd0lkN6NiekYfxoQB9oE9K3MpotKZLQXZgtK4ZJ8eLIktvCl1MXg8LS4hTDY6j1R-o7iMlmzx9NYYGfaJFEXAzwzvpbUYM"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md">Classic Veggie</h3>
+<span class="text-primary font-headline-md">₹285</span>
+</div>
+<p class="text-on-surface-variant body-md mb-8">Hand-crafted artisan patty with sun-ripened greens and our secret Moon-sauce.</p>
+<button onclick="window.location.href='tel:+918619515956'" class="w-full border border-outline-variant py-3 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 font-label-sm uppercase tracking-widest">Order Now</button>
+</div>
+<!-- Menu Card 3 -->
+<div class="glass-card group p-8 rounded-[40px]">
+<div class="aspect-square rounded-3xl overflow-hidden mb-8">
+<img alt="Laal Maas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A rich, red traditional Rajasthani Laal Maas curry served in a rustic copper bowl. The dish is garnished with fresh coriander and ginger juliennes. Beside it is a warm, buttery naan bread. The setting is luxurious and heritage-inspired with dark shadows and warm amber light reflecting off the metallic surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5bQ4tEXn6UFxQzoo8a-A9VA0HWueN-Uju-RTR_qGwb21BWFhNr77xoRIMXuzdDp_SIehmw2jnIWb8aCHsvxUFHsIq1ZYX53IZcswdI6sEMP9qSKOdSKpzFIstKQkiONRk1g3LGX5Fph44zqKuc7eUooS5T6LUtV2VkWB5iJQLT5GQlT8szCvaUtpFy1Bc7CmxrR1T3wSgpnXOS-PG5bOAwI0Ljz0sjUGjGWXWXF1FGFqdAZI9oEyDPzlAiFE_XjpU2ShX0EMg7MiO"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md">Royal Laal Maas</h3>
+<span class="text-primary font-headline-md">₹825</span>
+</div>
+<p class="text-on-surface-variant body-md mb-8">Udaipur's iconic slow-cooked mutton curry, infused with Mathania chilies.</p>
+<button onclick="window.location.href='tel:+918619515956'" class="w-full border border-outline-variant py-3 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 font-label-sm uppercase tracking-widest">Order Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Cinematic Section -->
+<section id="experience" class="py-stack-lg bg-surface overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop">
+<div class="space-y-stack-lg">
+<!-- Exp 1 -->
+<div class="grid md:grid-cols-2 gap-stack-md items-center">
+<div class="order-2 md:order-1 relative h-[300px] md:h-[500px] overflow-hidden rounded-[40px]">
+<img alt="Rooftop Sunset" class="w-full h-full object-cover" data-alt="A breathtaking view from a luxury rooftop in Udaipur during the transition from day to night. The sky is a gradient of deep orange and indigo. Silhouetted palace towers are seen against the glowing horizon. The scene feels premium and cinematic, capturing the essence of the golden hour in Rajasthan." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeRfwGVP0R-gBDFtjvfRdxnFT6xqCqVi2SGOiq3jDjUDpdckYAVJDJ5u0mxY7EfUukf_87sIQHFMgy0AnLb6NGScRRwl_lpS3aT0FHZs4SsXqPzyBnQzR4pjm-NMLrEfjEId6oPH69z_mQmzxEmeTX4Y8JY6IbYrCyVyqSx-aKmEnXFyLjxt8SH-qFMf8RnlnpLZ0HD_YTRylRik0mqhK4FzSx1i6f6vYbNh-nrYETs2AwPj74tPlzqZPsJEqMCiOegxP1nYkVS4LN"/>
+</div>
+<div class="order-1 md:order-2 md:pl-20">
+<h3 class="font-headline-lg text-4xl md:text-headline-lg mb-6">Rooftop Sunset</h3>
+<p class="text-body-lg text-on-surface-variant">Watch the sun dip below the Aravalli hills, painting the lake in shades of liquid gold from our front-row seats.</p>
+</div>
+</div>
+<!-- Exp 2 -->
+<div class="grid md:grid-cols-2 gap-stack-md items-center">
+<div class="md:pr-20">
+<h3 class="font-headline-lg text-4xl md:text-headline-lg mb-6">Live Music Nights</h3>
+<p class="text-body-lg text-on-surface-variant">Let the rhythms of Udaipur's finest artists serenate your dinner under the silver glow of the moon.</p>
+</div>
+<div class="relative h-[300px] md:h-[500px] overflow-hidden rounded-[40px]">
+<img alt="Live Music Night" class="w-full h-full object-cover" data-alt="An atmospheric indoor-outdoor restaurant stage with a musician playing an acoustic guitar. The lighting is moody with warm Edison bulbs and soft purple ambient lights. There is a sense of intimacy and high-end nightlife culture, with a blurry foreground of elegant cocktail glasses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi-17f48JNPlR65EfnHcXpv8TdmXKIXbJjRncvHhG2q3J_HJY3BIGCkIpeXNzAGJ0T2M_5JUqa3ekeaeeo-5piQM6CWfL-F7VYn1umdZu7_QmzfjQVAxZq4tppJvR8rLs6yr4VEdbrCjdud46gL7LLSU-JQt9WnDKccjG5DtkhgA4SbcoemDZYVCeabrQoF4M1LJ2hQW_PoV0Z30BEmlvoor_ODBMBlg78pjHk40dWCQTsQA7Hfpeb6A2Zsx--wGOX8NPPP_3YvB6f"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Masonry Gallery -->
+<section id="gallery" class="py-stack-lg bg-surface-container-low">
+<div class="px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-4xl md:text-headline-lg text-center mb-16">Capturing the Essence</h2>
+<div class="columns-1 md:columns-2 lg:columns-3 gap-gutter space-y-gutter">
+<div class="break-inside-avoid rounded-3xl overflow-hidden glass-card">
+<img alt="Cocktail" class="w-full hover:scale-105 transition-transform duration-500" data-alt="A close-up shot of a sophisticated signature cocktail in a crystal glass, garnished with a dried orange slice and a sprig of rosemary. Beads of condensation are visible on the glass. The background is a dimly lit, high-end rooftop bar with warm golden accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlJUgCmpK0WTAoTH4t6us6P9jqE7RQcTpPtolCvgU0LGt5_cMEc-ytrn9a7xA93Zd8bxLdyI0K6UUDw-hu-YN1yDtZnPHTRTOhg9cn144Df9SxODLlOUJZaAnkrf0_ZPppEBhOWqAF8W2xWu0GoDRyiQHAKB_-Uw3p49IORQsym9rWYbFseQP50u3xFDfF5q5ocvtFZHBz6WKeVuP59Fx3PHhqlvbywApclVYyeubf7RDHyoXb2W7W3dTjzD9MxvYOhVfK8uKsG925"/>
+</div>
+<div class="break-inside-avoid rounded-3xl overflow-hidden glass-card">
+<img alt="Dining Group" class="w-full hover:scale-105 transition-transform duration-500" data-alt="A group of friends laughing and enjoying a meal at an elegantly set table on a rooftop at night. The city's lights provide a sparkling backdrop. The mood is celebratory and luxury-oriented, with soft, natural-looking artificial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_OMlafbjAlqXMYgJ24h9eQyb3r9X8sJnkmk00im1nMZHZnOYSdWvO22ShGAST2WIIAA63LJ3wVy4H1f0alSdtP_jXxyqA5exe921XwDupbXdmXDHrTnQzFOtDWRMWJhUF95YJ55mtMHgByIeX4i1YIIaUWbkORPBTYCyGVVSI5tA2QWb9IDOr_ZXovu-IFDPTpugSDNowKEs5Q0ILG6otTCuap0ZKeIbl6Fi7lABZsaK-rlGfo6jHyxjuO4CWrQNv8zm5wELkCpVh"/>
+</div>
+<div class="break-inside-avoid rounded-3xl overflow-hidden glass-card">
+<img alt="Platter" class="w-full hover:scale-105 transition-transform duration-500" data-alt="A top-down view of an assortment of Rajasthani appetizers arranged artistically on ceramic plates. The food is colorful and vibrant against a dark stone table. The shot is high-contrast and editorially styled." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHSOqtSlc0qeXd_TwLN-Vy-2WPikHXYZpCQQfVnmOv67HQo6vEh29H5Z8hza2NQu7lGIHwTh9yiaIjpBZcGruOYDyhqtyXiCJcdTnJvc5ousxQvSTR05DXIojKcFKftW-O6hZC2rODgPK2RmWmAQJvIU5xgsFZGbnePmWG5cSPndXi2uPT-spaLjteFbk0RQTpOOC-KCpHKMRZGnVGk0bZy5ny_XZbrzdkCXZC6RaXgiyigjdYnTqk2Jrdoe9MTiIFOamaKPBy57Wx"/>
+</div>
+<div class="break-inside-avoid rounded-3xl overflow-hidden glass-card">
+<img alt="Palace View" class="w-full hover:scale-105 transition-transform duration-500" data-alt="A majestic view of the Udaipur City Palace across the water, seen through a modern glass window of a restaurant. The architecture is illuminated, casting reflections on Lake Pichola. The image feels exclusive and serene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWfwZpN_ouWa4dpCBKbT4ySxo3JzrH2DCAC3yXZPcy1tQpCdIt0UzokgpkOP-LrkmgsF-_Ujfd2C7OEnuqV0WxrU0B5DGjME7zxDVJU-I-tEB0HFV1pD5vL0u5NjQs-K7LNfr2L1n94zl3NIg1Icvm_Hs0q9fuLWsCTugNjmabNqd1br8CUAB-_m-_b1tnQZyzxcpNPN8dpk8c3Kje3yGFVdcFMrxeodSYTyaEp5tWVgICVDN90MywVF7cA1AbM2LwYGVH8lKAZWeU"/>
+</div>
+<div class="break-inside-avoid rounded-3xl overflow-hidden glass-card">
+<img alt="Coffee" class="w-full hover:scale-105 transition-transform duration-500" data-alt="Artistic latte art in a white ceramic cup, sitting on a wooden table with some coffee beans scattered around. The lighting is soft morning sun, creating a cozy cafe atmosphere in Udaipur's old streets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPmyBb8Klk8b9Kgzh4oZWdrCv2aaUE9eJssV8sEhJyAzIhS-mWKmT-9oeG5itK6-zs6_VLdA5mHuSv-pQwdsmbVC32zStBCqcBQ11aX8hnWVWYNZMj0_Cdq1goLhd8vKOarUocT_F0rrHteFtfjtyPaQ4c4eQ1r-2RStc67FGOHnoNMMXC0oyQdIWOpq-yBunPtUnYHwT7ciMwcG9IDnM6zmFCQ6-nK9Y-MfdvImrmtoyxPXgZyJSM8_a12n2uvwexpQVpvS3G_4PF"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-stack-lg bg-surface">
+<div class="px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-4xl md:text-headline-lg">Stories from our Guests</h2>
+</div>
+<div class="flex gap-4">
+<button class="p-4 border border-outline rounded-full hover:bg-primary transition-colors group">
+<span class="material-symbols-outlined group-hover:text-on-primary">arrow_back</span>
+</button>
+<button class="p-4 border border-outline rounded-full hover:bg-primary transition-colors group">
+<span class="material-symbols-outlined group-hover:text-on-primary">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="glass-card p-10 rounded-3xl">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<p class="font-body-lg italic mb-8">"The view of the Lake at sunset is absolutely unparalleled. Sun N Moon isn't just a cafe; it's an experience that captures the soul of Udaipur."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-outline-variant"></div>
+<div>
+<p class="font-bold">Ananya Sharma</p>
+<p class="text-label-sm uppercase text-outline opacity-70">Travel Blogger</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-3xl">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<p class="font-body-lg italic mb-8">"Best Laal Maas I've had in Rajasthan. The live music creates a romantic vibe that made our anniversary dinner truly unforgettable."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-outline-variant"></div>
+<div>
+<p class="font-bold">Vikram Mehta</p>
+<p class="text-label-sm uppercase text-outline opacity-70">Food Critic</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-3xl">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<p class="font-body-lg italic mb-8">"Friendly staff and incredible Peri Peri Pizza. The glassmorphism design of the rooftop area is so modern and chic."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-outline-variant"></div>
+<div>
+<p class="font-bold">Elena Rodriguez</p>
+<p class="text-label-sm uppercase text-outline opacity-70">Digital Nomad</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Map -->
+<section id="contact" class="py-stack-lg bg-surface-container-low border-t border-outline-variant/10">
+<div class="px-margin-mobile md:px-margin-desktop">
+<div class="grid md:grid-cols-2 gap-stack-lg items-center">
+<div>
+<h2 class="font-headline-lg text-4xl md:text-headline-lg mb-12">Visit the Moon</h2>
+<div class="space-y-10">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div>
+<h4 class="font-label-sm uppercase font-bold text-primary mb-2">Our Address</h4>
+<p class="text-body-lg">84, Level 5, Gangaur Ghat Marg,<br/>Udaipur, Rajasthan 313001</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">call</span>
+<div>
+<h4 class="font-label-sm uppercase font-bold text-primary mb-2">Reservations</h4>
+<p class="text-body-lg">+91 86195 15956</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+<div>
+<h4 class="font-label-sm uppercase font-bold text-primary mb-2">Service Hours</h4>
+<p class="text-body-lg">Daily: 8:30 AM – 11:30 PM</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4 mt-16">
+<a href="https://www.instagram.com/sunnmoonudaipur/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center rounded-full border border-outline hover:bg-primary text-primary hover:text-on-primary transition-all group" title="Instagram">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-full border border-outline hover:bg-primary transition-all group text-primary hover:text-on-primary" href="#">
+<i class="material-symbols-outlined">share</i>
+</a>
+</div>
+</div>
+<a href="https://www.google.com/maps/dir/?api=1&destination=Sun+N+Moon+Cafe,+Udaipur" target="_blank" rel="noopener noreferrer" class="relative h-[400px] md:h-[600px] rounded-[40px] overflow-hidden border border-outline-variant/30 grayscale hover:grayscale-0 transition-all duration-700 block cursor-pointer">
+<img alt="Location Map Placeholder" class="w-full h-full object-cover" data-alt="An artistic, minimalist map of Udaipur, highlighting the Gangaur Ghat area and Lake Pichola. The map uses a dark mode aesthetic with golden lines for major streets and glowing markers for key heritage sites. It feels high-end and integrated into the overall luxury brand identity." data-location="Udaipur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5w9VNoZYPudpmuDLosF1cIB084h2st8-ZD5ergNb99hT9qWS4_t83zCG3oSxTxzuIo_hGEvUcxAWyKxszwFzOA2SaHCD3Y7IrKiQEMPfnz7qkr_2-PT-SaklOR5-oIiVDlZ-fL19G5oal2wtCNhOU8OzD6OoKGHErmvLoBOppMdSFjnbW391P0JxQwvc4qIbn28YkZhKBvCYEB-4856a2kPxL0CnwHhmw_LNDP9h6aNn3YVdcpnB8XePgCfUdBjm4zNfQdLFrkiBG"/>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="glass-card p-6 rounded-2xl text-center pointer-events-auto">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">push_pin</span>
+<p class="font-bold">Sun N Moon</p>
+<p class="text-label-sm uppercase">Open in Maps</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-md gap-stack-sm text-center md:text-left">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Sun N Moon Cafe</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">© 2026 Sun N Moon Cafe. Elevating your golden hour.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://www.google.com/maps/dir/?api=1&destination=Sun+N+Moon+Cafe,+Udaipur" target="_blank" rel="noopener noreferrer">Directions (Google Maps)</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Sustainability</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Careers</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Terms of Service</a>
+</div>
+<button class="p-4 rounded-full bg-surface-container hover:bg-surface-container-high text-primary transition-all duration-300" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+</div>
+</footer>
+<script>
+function bookTable() {
+    const date = document.getElementById('res-date').value;
+    const guests = document.getElementById('res-guests').value;
+    const timeValue = document.getElementById('res-time').value;
+    
+    if(!date || !timeValue) {
+        alert("Please select a date and time for your reservation.");
+        return;
+    }
+
+    // Convert 24-hour time to 12-hour AM/PM format
+    let [hours, minutes] = timeValue.split(':');
+    let ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    const formattedTime = `${hours}:${minutes} ${ampm}`;
+
+    const message = `Hello Sun N Moon Cafe! I would like to reserve a table.%0A%0A*Date:* ${date}%0A*Time:* ${formattedTime}%0A*Guests:* ${guests}%0A%0APlease confirm availability.`;
+    const whatsappUrl = `https://wa.me/918619515956?text=${message}`;
+    
+    window.open(whatsappUrl, '_blank');
+}
+</script>
+</body></html>
