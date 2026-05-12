@@ -120,6 +120,8 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #131313; }
         ::-webkit-scrollbar-thumb { background: #564337; border-radius: 10px; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
@@ -189,7 +191,7 @@
 </div>
 </div>
 </div>
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+<div class="absolute bottom-10 w-full flex flex-col items-center justify-center gap-2 animate-bounce pointer-events-none">
 <span class="font-label-sm uppercase tracking-widest text-outline">Scroll to explore</span>
 <span class="material-symbols-outlined">expand_more</span>
 </div>
@@ -241,9 +243,9 @@
 <div class="h-1 w-24 bg-primary mx-auto mb-6 rounded-full"></div>
 <p class="text-body-lg text-on-surface-variant italic">Crafted flavors that dance on your palate</p>
 </div>
-<div class="grid md:grid-cols-3 gap-gutter">
+<div class="flex md:grid md:grid-cols-3 gap-gutter overflow-x-auto snap-x snap-mandatory pb-8 md:pb-0 hide-scrollbar -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
 <!-- Menu Card 1 -->
-<div class="glass-card group p-8 rounded-[40px]">
+<div class="glass-card group p-8 rounded-[40px] min-w-[85vw] md:min-w-0 snap-center shrink-0">
 <div class="aspect-square rounded-3xl overflow-hidden mb-8">
 <img alt="Tandoori Platter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A gourmet presentation of Tandoori Veg Kebab Platter on a slate stone board. The kebabs are charred to perfection with vibrant green mint chutney and colorful pickled onions as garnish. The lighting is dramatic and focused, highlighting the textures and spices of the food, set against a dark, minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNN8Xlz929zEZWP98qNyl1JurCkUbCFZZR6jrkRwRQqQhXXBxl2To8X24rn6TcJb37BI_43I1ERK_lqhdJ618zX2DKxtXr0joZSLuSNp7hbGUp4Bn_EiMPbx6uemBHyBTjfOmYhgXheyPlGqBRJVXY4mXWlRDtqCxVXMvCQpVlTHI_I-P8ThsQPibBtITaN-rLmibaZXj7ijU1opk9jchWE27Z7Az8RRv-Tn__AYwpYDYin4eOeJUe79XqzDr6j_75lOuAQfmbeeQn"/>
 </div>
@@ -255,7 +257,7 @@
 <button onclick="window.location.href='tel:+918619515956'" class="w-full border border-outline-variant py-3 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 font-label-sm uppercase tracking-widest">Order Now</button>
 </div>
 <!-- Menu Card 2 -->
-<div class="glass-card group p-8 rounded-[40px] md:mt-12">
+<div class="glass-card group p-8 rounded-[40px] md:mt-12 min-w-[85vw] md:min-w-0 snap-center shrink-0">
 <div class="aspect-square rounded-3xl overflow-hidden mb-8">
 <img alt="Signature Burger" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A towering gourmet burger with a juicy patty, melting cheese, fresh lettuce, and ripe tomatoes, served in a brioche bun. The burger is presented with crispy golden fries on the side. The lighting is warm and inviting, emphasizing the freshness and luxury quality of the ingredients with a blurred restaurant background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwzASOVCG9-8R5uVmYyuWD_G2jSuIgDNo88nhoMkee17yLCfWry41X8DcxyNMS_8wdNqxUtQKAF3eUKnmtjpZ2y1B7yrSgC-ppPtSmwUSUCgwjEeWueprME76PMfxIsDU9qnHT1x60llVttHzNWLJFaXRTpIcaQ9Mi2GduJer2d4bGBhHd0lkN6NiekYfxoQB9oE9K3MpotKZLQXZgtK4ZJ8eLIktvCl1MXg8LS4hTDY6j1R-o7iMlmzx9NYYGfaJFEXAzwzvpbUYM"/>
 </div>
@@ -267,7 +269,7 @@
 <button onclick="window.location.href='tel:+918619515956'" class="w-full border border-outline-variant py-3 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 font-label-sm uppercase tracking-widest">Order Now</button>
 </div>
 <!-- Menu Card 3 -->
-<div class="glass-card group p-8 rounded-[40px]">
+<div class="glass-card group p-8 rounded-[40px] min-w-[85vw] md:min-w-0 snap-center shrink-0">
 <div class="aspect-square rounded-3xl overflow-hidden mb-8">
 <img alt="Laal Maas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A rich, red traditional Rajasthani Laal Maas curry served in a rustic copper bowl. The dish is garnished with fresh coriander and ginger juliennes. Beside it is a warm, buttery naan bread. The setting is luxurious and heritage-inspired with dark shadows and warm amber light reflecting off the metallic surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5bQ4tEXn6UFxQzoo8a-A9VA0HWueN-Uju-RTR_qGwb21BWFhNr77xoRIMXuzdDp_SIehmw2jnIWb8aCHsvxUFHsIq1ZYX53IZcswdI6sEMP9qSKOdSKpzFIstKQkiONRk1g3LGX5Fph44zqKuc7eUooS5T6LUtV2VkWB5iJQLT5GQlT8szCvaUtpFy1Bc7CmxrR1T3wSgpnXOS-PG5bOAwI0Ljz0sjUGjGWXWXF1FGFqdAZI9oEyDPzlAiFE_XjpU2ShX0EMg7MiO"/>
 </div>
@@ -347,8 +349,8 @@
 </button>
 </div>
 </div>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="glass-card p-10 rounded-3xl">
+<div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-x-auto snap-x snap-mandatory pb-8 md:pb-0 hide-scrollbar -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+<div class="glass-card p-10 rounded-3xl min-w-[85vw] md:min-w-0 snap-center shrink-0">
 <div class="flex gap-1 text-primary mb-6">
 <span class="material-symbols-outlined" data-weight="fill">star</span>
 <span class="material-symbols-outlined" data-weight="fill">star</span>
@@ -365,7 +367,7 @@
 </div>
 </div>
 </div>
-<div class="glass-card p-10 rounded-3xl">
+<div class="glass-card p-10 rounded-3xl min-w-[85vw] md:min-w-0 snap-center shrink-0">
 <div class="flex gap-1 text-primary mb-6">
 <span class="material-symbols-outlined" data-weight="fill">star</span>
 <span class="material-symbols-outlined" data-weight="fill">star</span>
@@ -382,7 +384,7 @@
 </div>
 </div>
 </div>
-<div class="glass-card p-10 rounded-3xl">
+<div class="glass-card p-10 rounded-3xl min-w-[85vw] md:min-w-0 snap-center shrink-0">
 <div class="flex gap-1 text-primary mb-6">
 <span class="material-symbols-outlined" data-weight="fill">star</span>
 <span class="material-symbols-outlined" data-weight="fill">star</span>
